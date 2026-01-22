@@ -5,8 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Soares Da Silva</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/responsive.css">
 </head>
 <body>
-    
+    <div class="navbar">
+        <button class="hamburger"></button>
+        <header>Miguel Soares</header>
+        <ul class="nav-list">
+            <li><a class="active" href="index.html"><img src="assets/imgs/casa.png" alt="hm" class="logos"><p class="text">Home</p></a></li>
+            <li><a href="https://github.com/Ikkou-migs23" target="_blank"><img src="assets/imgs/github.png" alt="gh" class="logos"><p class="text">GitHub</p></a></li>
+            <li><a href="https://github.com/Ikkou-migs23?tab=repositories" target="_blank"><img src="assets/imgs/coder.png" alt="pj" class="logos"><p class="text">Projetos</p></a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="myself">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam rem reiciendis cumque accusamus. Earum unde amet illo sunt fugiat, dicta ex voluptatum vel itaque laboriosam consequatur porro vero velit neque!</p>
+        </div>
+        <div class="main-projects">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus quis iusto veniam, enim voluptas incidunt veritatis quidem quas ullam, provident impedit earum pariatur ad beatae magni deleniti, temporibus optio eum?</p>
+        </div>
+    </main>
+
+    <section class="carrosel-projects">
+        <h2>Meus Projetos</h2>
+        <div class="carrosel-container">
+            <button class="carrosel-btn prev" onclick="prevSlide()">❮</button>
+            
+            <div class="carrosel-slides">
+                <div class="slide active">
+                    <img src="assets/imgs/img1.png" alt="Projeto 1" class="slide-img">
+                </div>
+                <div class="slide">
+                    <img src="assets/imgs/img2.png" alt="Projeto 2" class="slide-img">
+                </div>
+                <div class="slide">
+                    <img src="assets/imgs/img3.png" alt="Projeto 3" class="slide-img">
+                </div>
+            </div>
+            
+            <button class="carrosel-btn next" onclick="nextSlide()">❯</button>
+        </div>
+        
+        <div class="carrosel-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+
+    <script src="assets/script.js"></script>
+    <script src="assets/responsive.js"></script>
 </body>
 </html>
