@@ -219,3 +219,30 @@ main {
 .dot.active {
   background-color: #7701ff;
 }
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dashed #000;
+  cursor: pointer;
+}
+
+.tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: none;
+}
+
+.tooltip:hover::before {
+  display: block;
+  opacity: 1;
+}   
