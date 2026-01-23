@@ -51,19 +51,18 @@
     height: 100vh;
     background: #b9b9b9;
     list-style: none;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
-    clip-path: circle(100px at 20px 20px);
-    transition: clip-path 1s ease-out;
-    pointer-events: none;
+    transition: all 0.3s ease-out;
     z-index: 999;
   }
 
   .nav-list li {
     text-align: center;
+    display: flex;
   }
 
   .nav-list a {
@@ -75,6 +74,11 @@
     align-items: center;
     gap: 15px;
     padding: 20px;
+    pointer-events: none;
+  }
+
+  .navbar.active .nav-list a {
+    pointer-events: all;
   }
 
   .nav-list li:nth-child(1) a {
@@ -91,7 +95,7 @@
 
   /* Estilos ativos do menu */
   .navbar.active .nav-list {
-    clip-path: circle(1500px at 20px 20px);
+    display: flex;
     pointer-events: all;
   }
 
